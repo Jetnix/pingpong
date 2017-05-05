@@ -10,8 +10,18 @@
   </head>
   <body>
     <div class="container">
-      <form id=pingpong>
-        <input type="text" id="number" class="form-control">
+      <h1>Ping-Pong</h1>
+      <h3>How it works...</h3>
+      <ol>
+        <li>Numbers divisible by 3 are replaced with "PING"</li>
+        <li>Numbers divisible by 5 are replaced with "PONG"</li>
+        <li>Numbers divisible by 15 are replaced with "PING-PONG"</li>
+      </ol>
+    </div>
+    <div class="container">
+      <form id=pingPong>
+        <label for="number">Try typing a number!</label>
+        <input type="text" id="number" class="form-control" pattern="\d+">
         <button type="submit" class="btn btn-info">Give it a try!</button>
         <ul id="display">
         </ul>

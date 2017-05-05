@@ -1,18 +1,29 @@
+var input = [];
 var output = [];
 
 function converter(number) {
-    if (!isNaN(number) === false) {
-      alert("Invalid Entry, try a number.")
+  debugger;
+  number = parseInt(number);
+  if  (number/15) {
+    number = "PING-PONG";
+    $("ul#display").prepend("<li>" + number + "</li>");
   }
-    else if (number === "") {
-      alert("Invalid Entry, try entering something!");
+  else if (number/3) {
+    number = "PING";
+    $("ul#display").prepend("<li>" + number + "</li>");
+  }
+
+  else if (number/5) {
+    number = "PONG";
+    $("ul#display").prepend("<li>" + number + "</li>");
   }
 }
 
 $(document).ready(function() {
-  $("form#pingpong").submit(function(event) {
+  $("form#pingPong").submit(function(event) {
      event.preventDefault();
+     debugger;
      var number = $("input#number").val();
-    $("ul#display").prepend("<li>" + number + "</li>");
+     $("#display").text(converter(number));
   });
 });
